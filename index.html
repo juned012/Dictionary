@@ -5,5 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dictionary</title>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <h2>Fruits Dictionary</h2>
+      <div>
+        <input
+          type="text"
+          placeholder="Search Your Meaning"
+          list="meaningsList"
+          id="meaningInput"
+        />
+        <datalist id="meaningsList">
+          <option value="Cashew"></option>
+          <option value="Plum"></option>
+          <option value="Lychee"></option>
+          <option value="Pear"></option>
+          <option value="Date"></option>
+          <option value="Apple"></option>
+          <option value="Banana"></option>
+          <option value="Mango"></option>
+          <option value="Orange"></option>
+          <option value="Grapes"></option>
+        </datalist>
+        <button type="button" onclick="searchMeaning()">Search</button>
+      </div>
+    </div>
+  </body>
 </html>
