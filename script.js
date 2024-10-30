@@ -31,15 +31,23 @@ const meaningList = {
   Spinach: "पालक",
 };
 
+const meaningElement = document.getElementById("meaning");
+const clearBtn = document.getElementById("clearBtn");
+clearBtn.style.display = "none";
 function searchMeaning() {
   const inputElement = document.getElementById("meaningInput");
-  const meaningElement = document.getElementById("meaning");
   const query = inputElement.value;
   const meaning = meaningList[query];
   if (meaning) {
     meaningElement.textContent = `You searched for "${query}" and its meaning in Hindi is "${meaning}".`;
     inputElement.value = "";
+    clearBtn.style.display = "block";
   } else {
     meaningElement.textContent = `Sorry, "${query}" is not in the dictionary.`;
   }
+}
+
+function clearMeaning() {
+  meaningElement.textContent = "";
+  clearBtn.style.display = "none";
 }
